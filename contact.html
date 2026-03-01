@@ -1,1 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request a Quote | Precision Works Detailing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
+  <div class="topline">
+    <div class="container">
+      <div class="row">
+        <div class="pill"><span class="dot"></span> Goshen, IN — Serving surrounding areas</div>
+        <div class="pill">Fast reply • No booking links</div>
+      </div>
+    </div>
+  </div>
+
+  <header class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="name">Precision Works Detailing</div>
+        <div class="sub">Performance-level finish. Clean, sharp, local.</div>
+      </div>
+      <div class="navlinks">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="portfolio.html">Portfolio</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="contact.html">Request a Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="pageHead">
+      <h1>Request a quote</h1>
+      <p>
+        Tell us what you want done and what vehicle you have. We’ll respond with a clean recommendation and pricing.
+        (This form is a placeholder — we can wire it to email/Forms next.)
+      </p>
+    </div>
+
+    <section class="section" style="padding-top:18px;">
+      <div class="card" style="padding:18px;">
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          ✅ Next step after this: we add a real form handler + anti-spam (Cloudflare Turnstile) so bots can’t spam you.
+        </p>
+
+        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="mailto:your@email.com?subject=Quote%20Request%20-%20Precision%20Works%20Detailing">Email to Request a Quote</a>
+          <a class="btn" href="portfolio.html">See Results</a>
+        </div>
+
+        <p style="margin-top:14px; color:var(--faint); font-size:12px;">
+          Replace <b>your@email.com</b> with your real business email when you’re ready.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footRow">
+      <div>© <span id="yr"></span> Precision Works Detailing • Goshen, IN</div>
+      <div class="smallLinks">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
