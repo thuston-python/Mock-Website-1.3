@@ -1,1 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Precision Works Detailing | Goshen, IN</title>
+  <meta name="description" content="Luxury-level detailing with an edge. Serving Goshen, IN and surrounding areas." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
+  <!-- Sticky top line -->
+  <div class="topline">
+    <div class="container">
+      <div class="row">
+        <div class="pill"><span class="dot"></span> Goshen, IN — Serving surrounding areas</div>
+        <div class="pill">Text: <b style="color:var(--text)">Request a Quote</b> • No spam, no pressure</div>
+      </div>
+    </div>
+  </div>
+
+  <header class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="name">Precision Works Detailing</div>
+        <div class="sub">Performance-level finish. Clean, sharp, local.</div>
+      </div>
+
+      <div class="navlinks">
+        <a data-nav href="index.html" class="active">Home</a>
+        <a data-nav href="portfolio.html">Portfolio</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="contact.html">Request a Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container heroGrid">
+      <div class="card heroPhoto">
+        <!-- IMPORTANT: filename must match your repo EXACTLY -->
+        <img src="assets/images/hero-mercedes-top-closed.jpg" alt="Clean white Mercedes (top view)" />
+      </div>
+
+      <div class="card heroCopy">
+        <div class="kicker">Goshen, IN • premium detailing</div>
+        <h1 class="h1">Luxury-level detailing with an edge.</h1>
+        <p class="lead">
+          Crisp reflections. Tight lines. Zero shortcuts. We obsess over the small stuff other shops miss —
+          because that’s what makes it look expensive.
+        </p>
+
+        <div class="heroActions">
+          <a class="btn primary" href="contact.html">Request a Quote</a>
+          <a class="btn" href="portfolio.html">See Results</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><b>1–2 days</b><span>Typical turnaround</span></div>
+          <div class="stat"><b>100%</b><span>Hand-finished touch points</span></div>
+          <div class="stat"><b>Local</b><span>Goshen + surrounding areas</span></div>
+          <div class="stat"><b>Detail-first</b><span>Creases, trim, glass</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="sectionTitle">
+        <h2>Services</h2>
+        <p>Minimal talk. Maximum results. Pick what you need — we’ll recommend the best route when you request a quote.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card service">
+          <div class="tag"><i></i> Exterior</div>
+          <h3>Exterior Detail</h3>
+          <p>Safe wash + decon + finish work that brings back clarity and depth. Clean paint, clean lines.</p>
+        </div>
+
+        <div class="card service">
+          <div class="tag"><i></i> Interior</div>
+          <h3>Interior Detail</h3>
+          <p>Touch points, creases, seams — the details that make the cabin feel new again.</p>
+        </div>
+
+        <div class="card service">
+          <div class="tag"><i></i> Deep Clean</div>
+          <h3>Steam / Deep Clean</h3>
+          <p>Precision cleaning for panels, seams, and high-contact areas. Perfect for resets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY PREVIEW -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="sectionTitle">
+        <h2>Proof</h2>
+        <p>Real results. Clean finishes. If you want more, the full set is in Portfolio.</p>
+      </div>
+
+      <div class="gallery">
+        <a class="gItem big" href="portfolio.html">
+          <img src="assets/images/gallery-red-car-foam-bay.jpg" alt="Red car covered in foam in detailing bay" />
+          <div class="gCaption">Foam bay — rinse-ready</div>
+        </a>
+
+        <a class="gItem" href="portfolio.html">
+          <img src="assets/images/gallery-blue-headlight-closeup.jpg" alt="Blue car headlight closeup" />
+          <div class="gCaption">Headlight clarity</div>
+        </a>
+
+        <a class="gItem" href="portfolio.html">
+          <img src="assets/images/service-hand-wash-sponge.jpg" alt="Hand wash sponge on wet paint" />
+          <div class="gCaption">Safe contact wash</div>
+        </a>
+
+        <a class="gItem" href="portfolio.html">
+          <img src="assets/images/service-interior-clean-suv.jpg" alt="Clean interior of SUV" />
+          <div class="gCaption">Interior reset</div>
+        </a>
+      </div>
+
+      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn" href="portfolio.html">View Full Portfolio</a>
+        <a class="btn primary" href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footRow">
+      <div>© <span id="yr"></span> Precision Works Detailing • Goshen, IN</div>
+      <div class="smallLinks">
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
