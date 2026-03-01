@@ -4,81 +4,148 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About | Precision Works Detailing</title>
+  <meta name="description" content="About Precision Works Detailing — premium detailing in Goshen, IN and surrounding areas." />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
+  <!-- Sticky top info (minimal) -->
   <div class="topline">
     <div class="container">
       <div class="row">
-        <div class="pill"><span class="dot"></span> Goshen, IN — Serving surrounding areas</div>
+        <div class="pill"><span class="dot"></span> Goshen, IN • Surrounding areas</div>
         <a class="pill" href="contact.html">Request a Quote</a>
       </div>
     </div>
   </div>
 
+  <!-- Header / Nav -->
   <header class="container">
     <nav class="nav">
       <div class="brand">
         <div class="name">Precision Works Detailing</div>
-        <div class="sub">Performance-level finish. Clean, sharp, local.</div>
+        <div class="sub">Luxury-level detailing with an edge.</div>
       </div>
+
       <div class="navlinks">
         <a data-nav href="index.html">Home</a>
         <a data-nav href="portfolio.html">Portfolio</a>
-        <a data-nav href="about.html">About</a>
+        <a data-nav href="about.html" class="active">About</a>
         <a data-nav href="contact.html">Request a Quote</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
-    <div class="pageHead">
-      <h1>About us</h1>
-      <p>
-        Precision Works Detailing is built on one idea: the details are what sell the finish.
-        We’re a local Goshen team focused on tight lines, clean touch points, and a premium final look — without the
-        “quick wash” shortcuts.
-      </p>
-      <p>
-        Whether it’s a daily driver that needs a reset or a car you take pride in, we treat every vehicle like it’s
-        the one you’ll notice the most. Our approach is simple: safe process, clean tools, and patient finishing.
-        If it doesn’t look expensive when we’re done, we’re not finished.
-      </p>
-    </div>
-
-    <section class="section" style="padding-top:18px;">
-      <div class="sectionTitle">
-        <h2>What makes us different</h2>
-        <p>No gimmicks — just consistency.</p>
-      </div>
-
-      <div class="grid3">
-        <div class="card service">
-          <div class="tag"><i></i> Process</div>
-          <h3>Safe + repeatable</h3>
-          <p>We use a method that protects finishes and keeps results consistent — not rushed.</p>
+  <!-- Cover / Intro -->
+  <main>
+    <section class="container" style="padding: 10px 0 0;">
+      <div class="card" style="position:relative; overflow:hidden;">
+        <!-- Background image -->
+        <div style="position:absolute; inset:0;">
+          <img
+            src="assets/images/gallery-red-car-foam-bay.jpg"
+            alt="Detailing foam bay background"
+            style="width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.05) saturate(1.05); transform:scale(1.02);"
+          />
+          <!-- Dark overlay -->
+          <div style="position:absolute; inset:0; background: linear-gradient(90deg, rgba(0,0,0,0.78), rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.72));"></div>
         </div>
 
-        <div class="card service">
-          <div class="tag"><i></i> Finishing</div>
-          <h3>Edges + touch points</h3>
-          <p>Creases, trim lines, glass clarity — the small stuff that changes the whole car.</p>
-        </div>
+        <!-- Foreground content -->
+        <div style="position:relative; padding: 28px; min-height: 340px; display:flex; flex-direction:column; justify-content:flex-end;">
+          <div class="kicker">About</div>
+          <h1 class="h1" style="margin-top:10px;">Built for clean lines.</h1>
+          <p class="lead" style="max-width: 720px;">
+            We’re a Goshen-based detailing team focused on the finish you can actually see:
+            clean edges, clear glass, tight trim, and paint that looks expensive under real light.
+          </p>
 
-        <div class="card service">
-          <div class="tag"><i></i> Local</div>
-          <h3>Goshen-based</h3>
-          <p>We serve Goshen and nearby areas — quality work for the community we live in.</p>
+          <div class="heroActions">
+            <a class="btn primary" href="contact.html">Request a Quote</a>
+            <a class="btn" href="portfolio.html">See Results</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div style="margin-top:16px;">
-        <a class="btn primary" href="contact.html">Request a Quote</a>
+    <!-- Core values (minimal cards) -->
+    <section class="section">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>What we focus on</h2>
+          <p>Simple process. Consistent results. No rushed work.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card service">
+            <div class="tag"><i></i> Finish</div>
+            <h3>Details that change the whole car</h3>
+            <p>Creases, seams, touch points, trim edges — the stuff most places skip.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag"><i></i> Safety</div>
+            <h3>Paint-safe methods</h3>
+            <p>Clean tools, careful contact, and a process that protects the finish.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag"><i></i> Local</div>
+            <h3>Goshen + nearby areas</h3>
+            <p>We’re not trying to serve everyone — just our area, done right.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing preview (clean + minimal) -->
+    <section class="section" style="padding-top: 10px;">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Pricing</h2>
+          <p>Quick reference. Final quote depends on vehicle size + condition.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card service">
+            <div class="tag"><i></i> Exterior</div>
+            <h3>Exterior Detail</h3>
+            <p style="margin-bottom:10px;">Wash • decon • finish</p>
+            <p style="color: var(--text); margin:0;"><b>Starting at $120</b></p>
+            <p style="color: var(--muted); margin:6px 0 0; font-size:12px;">Sedans typically fall here.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag"><i></i> Interior</div>
+            <h3>Interior Detail</h3>
+            <p style="margin-bottom:10px;">Vacuum • wipe-down • touch points</p>
+            <p style="color: var(--text); margin:0;"><b>Starting at $140</b></p>
+            <p style="color: var(--muted); margin:6px 0 0; font-size:12px;">Heavily soiled may vary.</p>
+          </div>
+
+          <div class="card service">
+            <div class="tag"><i></i> Full Reset</div>
+            <h3>Full Detail</h3>
+            <p style="margin-bottom:10px;">Interior + exterior package</p>
+            <p style="color: var(--text); margin:0;"><b>Starting at $240</b></p>
+            <p style="color: var(--muted); margin:6px 0 0; font-size:12px;">Best value for most cars.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="contact.html">Request a Quote</a>
+          <a class="btn" href="portfolio.html">View Portfolio</a>
+        </div>
+
+        <p style="margin-top:12px; color: var(--faint); font-size: 12px; line-height:1.6;">
+          Note: Prices shown are “starting at” to stay accurate. We’ll confirm final pricing after we know the vehicle and condition.
+        </p>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footRow">
       <div>© <span id="yr"></span> Precision Works Detailing • Goshen, IN</div>
@@ -91,6 +158,8 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
