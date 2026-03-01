@@ -1,11 +1,11 @@
 /* =========================================
-   Precision Works Detailing - Core Script
-   Minimal, smooth, lag-free.
+   Precision Works Detailing - Unified Script
+   Smooth, minimal, works across ALL pages.
    ========================================= */
 
 (function () {
-  // Respect reduced motion preferences
-  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReduced =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---------------------------
   // 1) Active Nav Highlight
@@ -23,7 +23,15 @@
   })();
 
   // ---------------------------
-  // 2) Smooth Scroll Anchors
+  // 2) Footer Year (if #yr exists)
+  // ---------------------------
+  (function setYear() {
+    const yr = document.getElementById("yr");
+    if (yr) yr.textContent = new Date().getFullYear();
+  })();
+
+  // ---------------------------
+  // 3) Smooth Scroll Anchors
   // ---------------------------
   (function smoothAnchors() {
     document.addEventListener("click", (e) => {
@@ -37,26 +45,20 @@
       if (!target) return;
 
       e.preventDefault();
-      if (prefersReduced) {
-        target.scrollIntoView();
-      } else {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      if (prefersReduced) target.scrollIntoView();
+      else target.scrollIntoView({ behavior: "smooth", block: "start" });
+
       history.replaceState(null, "", id);
     });
   })();
 
   // ---------------------------
-  // 3) Page Enter Animation
-  // (subtle, fast, safe)
+  // 4) Page Enter Animation
   // ---------------------------
   (function pageEnter() {
     if (prefersReduced) return;
 
-    // Add a tiny class to body for a fade-in
     document.documentElement.classList.add("js");
-
-    // Inline style injection (keeps styles.css unchanged)
     const style = document.createElement("style");
     style.textContent = `
       .js body { opacity: 0; transform: translateY(6px); }
@@ -64,16 +66,14 @@
     `;
     document.head.appendChild(style);
 
-    // Mark ready after first paint
     requestAnimationFrame(() => {
       document.body.classList.add("is-ready");
     });
   })();
 
   // ---------------------------
-  // 4) Reveal on scroll (optional)
-  // Add data-reveal to any element you want animated.
-  // Example: <div class="card" data-reveal>...</div>
+  // 5) Reveal on scroll (optional)
+  // Add data-reveal on any element
   // ---------------------------
   (function revealOnScroll() {
     if (prefersReduced) return;
@@ -81,7 +81,6 @@
     const els = Array.from(document.querySelectorAll("[data-reveal]"));
     if (!els.length) return;
 
-    // Inject reveal styles (no need to edit CSS file)
     const style = document.createElement("style");
     style.textContent = `
       [data-reveal] { opacity: 0; transform: translateY(10px); transition: opacity 500ms ease, transform 500ms ease; }
@@ -89,7 +88,6 @@
     `;
     document.head.appendChild(style);
 
-    // Intersection Observer
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -105,8 +103,7 @@
   })();
 
   // ---------------------------
-  // 5) Small UX: external links safety
-  // If you ever add target="_blank", ensure rel is safe.
+  // 6) Safe target=_blank links
   // ---------------------------
   (function safeBlankTargets() {
     document.querySelectorAll('a[target="_blank"]').forEach((a) => {
@@ -114,6 +111,43 @@
       if (!rel.includes("noopener")) a.setAttribute("rel", (rel + " noopener").trim());
       if (!rel.includes("noreferrer")) a.setAttribute("rel", (a.getAttribute("rel") + " noreferrer").trim());
     });
+  })();
+
+  // ---------------------------
+  // 7) Pricing Calculator (index)
+  // Works only if pricing elements exist
+  // ---------------------------
+  (function pricingCalc() {
+    const vehicleSize = document.getElementById("vehicleSize");
+    const condition = document.getElementById("condition");
+    const cards = Array.from(document.querySelectorAll(".priceCard[data-base]"));
+    const addOns = Array.from(document.querySelectorAll(".addonCheck[data-add]"));
+
+    if (!vehicleSize || !condition || !cards.length) return;
+
+    function getAddonTotal() {
+      return addOns.reduce((sum, el) => sum + (el.checked ? Number(el.dataset.add || 0) : 0), 0);
+    }
+
+    function update() {
+      const sizeAdd = Number(vehicleSize.value || 0);
+      const conditionAdd = Number(condition.value || 0);
+      const addonAdd = getAddonTotal();
+
+      cards.forEach((card) => {
+        const base = Number(card.dataset.base || 0);
+        const total = Math.max(0, base + sizeAdd + conditionAdd + addonAdd);
+
+        const out = card.querySelector(".priceValue");
+        if (out) out.textContent = String(total);
+      });
+    }
+
+    vehicleSize.addEventListener("change", update);
+    condition.addEventListener("change", update);
+    addOns.forEach((a) => a.addEventListener("change", update));
+
+    update();
   })();
 
 })();
