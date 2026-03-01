@@ -1,322 +1,234 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Precision Works Detailing | Goshen, IN</title>
-  <meta name="description" content="Luxury-level detailing in Goshen, IN and surrounding areas. Request a quote for premium interior + exterior detailing." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precision Works Detailing | Goshen, IN</title>
 
-  <!-- Fonts (premium + readable) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container topbarInner">
-      <div class="pill">Goshen, IN • Surrounding areas</div>
-      <a class="pill pillBtn" href="contact.html">Request a Quote</a>
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="container navFlex">
+    <div class="pill">Goshen, IN • Surrounding areas</div>
+    <a href="contact.html" class="btn btn--ghost">Request a Quote</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="container header">
+  <div class="brand">
+    <div class="brand__name">Precision Works</div>
+    <div class="brand__tag">Detailing</div>
+  </div>
+
+  <nav class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="btn btn--accent">Request a Quote</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero container">
+  <div class="heroCard">
+    <div class="heroMedia" style="background-image:url('assets/images/hero-mercedes-top-closed.jpg.JPG');"></div>
+
+    <div class="heroInner">
+      <div class="kicker">PERFORMANCE-LEVEL FINISH • GOSHEN, IN</div>
+
+      <h1>
+        Luxury-level detailing<br>
+        with an edge.
+      </h1>
+
+      <p>
+        Crisp reflections. Tight lines. Zero shortcuts. We obsess over the small stuff that makes a car look expensive in real light.
+      </p>
+
+      <div class="heroActions">
+        <a href="contact.html" class="btn btn--accent">Request a Quote</a>
+        <a href="portfolio.html" class="btn btn--ghost">See Results</a>
+      </div>
+
+      <div class="heroFacts">
+        <div><b>1–2</b> Day turnaround</div>
+        <div><b>Local</b> Goshen + nearby</div>
+        <div><b>Finished</b> Edges, glass, trim</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT CLIENTS NOTICE -->
+<section class="section container">
+  <div class="sectionHead">
+    <div>
+      <h2>What clients notice first</h2>
+      <p>Minimal talk. Maximum results.</p>
     </div>
   </div>
 
-  <!-- Header / Nav -->
-  <header class="header">
-    <div class="container headerInner">
-      <div class="brand">
-        <div class="brandName">Precision Works</div>
-        <div class="brandSub">Detailing</div>
+  <div class="chips">
+    <span class="chip">Glass clarity</span>
+    <span class="chip">Trim detail</span>
+    <span class="chip">Creases & seams</span>
+    <span class="chip">Touch points</span>
+    <span class="chip">No haze</span>
+    <span class="chip">No shortcuts</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section container">
+  <div class="sectionHead">
+    <div>
+      <h2>Services</h2>
+      <p>Built around the details other shops skip.</p>
+    </div>
+  </div>
+
+  <div class="grid grid--3">
+
+    <div class="card serviceCard">
+      <h3>Exterior Detail</h3>
+      <p>Wash, decon, and finish work that brings back clarity and depth.</p>
+      <div class="serviceMeta">
+        <span class="tag">Foam wash</span>
+        <span class="tag">Decon</span>
+        <span class="tag">Sealant</span>
       </div>
-
-      <nav class="nav">
-        <a class="navLink active" href="index.html">Home</a>
-        <a class="navLink" href="portfolio.html">Portfolio</a>
-        <a class="navLink" href="about.html">About</a>
-        <a class="navLink navCta" href="contact.html">Request a Quote</a>
-      </nav>
-
-      <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
 
-    <!-- Mobile menu -->
-    <div class="mobileNav" id="mobileNav" hidden>
-      <a href="index.html" class="mobileLink">Home</a>
-      <a href="portfolio.html" class="mobileLink">Portfolio</a>
-      <a href="about.html" class="mobileLink">About</a>
-      <a href="contact.html" class="mobileLink mobileCta">Request a Quote</a>
-    </div>
-  </header>
-    <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="heroBg" aria-hidden="true">
-        <!-- Background image -->
-        <img src="assets/images/hero-mercedes-top-closed.jpg.JPG" alt="">
-      </div>
-
-      <div class="container heroInner">
-        <div class="heroKicker">PERFORMANCE-LEVEL FINISH • GOSHEN, IN</div>
-
-        <h1 class="heroTitle">
-          Luxury-level detailing<br />
-          <span class="heroAccent">with an edge.</span>
-        </h1>
-
-        <p class="heroLead">
-          Crisp reflections. Tight lines. Zero shortcuts. We obsess over the small stuff that makes a car look expensive in real light.
-        </p>
-
-        <div class="heroActions">
-          <a class="btn btnPrimary" href="contact.html">Request a Quote</a>
-          <a class="btn btnGhost" href="portfolio.html">See Results</a>
-        </div>
-
-        <div class="heroStats">
-          <div class="stat">
-            <div class="statValue">1–2</div>
-            <div class="statLabel">Day turnaround (typical)</div>
-          </div>
-          <div class="stat">
-            <div class="statValue">Local</div>
-            <div class="statLabel">Goshen + nearby</div>
-          </div>
-          <div class="stat">
-            <div class="statValue">Finished</div>
-            <div class="statLabel">Edges, glass, trim</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT CLIENTS NOTICE -->
-    <section class="section">
-      <div class="container">
-        <div class="sectionHead">
-          <div>
-            <h2>What clients notice first</h2>
-            <p>Minimal talk. Maximum results.</p>
-          </div>
-        </div>
-
-        <div class="chips">
-          <span class="chip">Glass clarity</span>
-          <span class="chip">Trim detail</span>
-          <span class="chip">Creases & seams</span>
-          <span class="chip">Touch points</span>
-          <span class="chip">Clean edges</span>
-          <span class="chip">No haze</span>
-          <span class="chip">No shortcuts</span>
-          <span class="chip">Premium finish</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="section">
-      <div class="container">
-        <div class="sectionHead">
-          <div>
-            <h2>Services</h2>
-            <p>Built around the details other shops skip.</p>
-          </div>
-          <a class="linkArrow" href="contact.html">Request a quote →</a>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <div class="cardTag">Exterior</div>
-            <h3>Exterior Detail</h3>
-            <p>Safe wash, decon, and finish work that brings back clarity and depth.</p>
-            <ul class="list">
-              <li>Hand wash + foam</li>
-              <li>Wheel + tire detail</li>
-              <li>Decontamination</li>
-              <li>Spray sealant finish</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="cardTag">Interior</div>
-            <h3>Interior Detail</h3>
-            <p>Touch points, creases, and details that make the cabin feel new again.</p>
-            <ul class="list">
-              <li>Vacuum + blowout</li>
-              <li>Panels + trim</li>
-              <li>Glass clarity</li>
-              <li>Spot stain treatment</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="cardTag">Deep Clean</div>
-            <h3>Deep Clean / Steam</h3>
-            <p>Precision cleaning for seams and high-contact areas.</p>
-            <ul class="list">
-              <li>Steam for cracks + creases</li>
-              <li>Sanitizing touch points</li>
-              <li>Hard-to-reach detail</li>
-              <li>Finish wipe-down</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING (clean + customizable) -->
-    <section class="section" id="pricing">
-      <div class="container">
-        <div class="sectionHead">
-          <div>
-            <h2>Pricing</h2>
-            <p>Quick reference. Final quote depends on size + condition.</p>
-          </div>
-        </div>
-
-        <div class="pricingBar">
-          <div class="select">
-            <label for="vehicleSize">Vehicle size</label>
-            <select id="vehicleSize">
-              <option value="0">Sedan</option>
-              <option value="20">SUV</option>
-              <option value="40">Truck / Large SUV</option>
-            </select>
-          </div>
-
-          <div class="select">
-            <label for="condition">Condition</label>
-            <select id="condition">
-              <option value="0">Typical</option>
-              <option value="30">Moderate (extra time)</option>
-              <option value="60">Heavy (restoration level)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="priceGrid">
-          <div class="priceCard" data-base="120">
-            <h3>Exterior</h3>
-            <p class="muted">Wash • decon • finish</p>
-            <div class="priceLine">
-              <span>Starting at</span>
-              <strong>$<span class="priceValue">120</span></strong>
-            </div>
-          </div>
-
-          <div class="priceCard" data-base="140">
-            <h3>Interior</h3>
-            <p class="muted">Cabin reset • touch points</p>
-            <div class="priceLine">
-              <span>Starting at</span>
-              <strong>$<span class="priceValue">140</span></strong>
-            </div>
-          </div>
-
-          <div class="priceCard" data-base="240">
-            <h3>Full Detail</h3>
-            <p class="muted">Interior + exterior package</p>
-            <div class="priceLine">
-              <span>Starting at</span>
-              <strong>$<span class="priceValue">240</span></strong>
-            </div>
-          </div>
-        </div>
-
-        <div class="addons">
-          <div class="addonsHead">
-            <h3>Add-ons</h3>
-            <p class="muted">Only pick what you need.</p>
-          </div>
-
-          <div class="addonGrid">
-            <label class="addon">
-              <input type="checkbox" class="addonCheck" data-add="25">
-              <span>Pet hair removal</span>
-              <em>+ $25</em>
-            </label>
-
-            <label class="addon">
-              <input type="checkbox" class="addonCheck" data-add="35">
-              <span>Engine bay wipe-down</span>
-              <em>+ $35</em>
-            </label>
-
-            <label class="addon">
-              <input type="checkbox" class="addonCheck" data-add="30">
-              <span>Headlight clarity</span>
-              <em>+ $30</em>
-            </label>
-
-            <label class="addon">
-              <input type="checkbox" class="addonCheck" data-add="50">
-              <span>Ceramic spray upgrade</span>
-              <em>+ $50</em>
-            </label>
-          </div>
-
-          <div class="totalBar">
-            <div>
-              <div class="totalLabel">Estimated starting total</div>
-              <div class="totalNote">We confirm final pricing after seeing the vehicle.</div>
-            </div>
-            <div class="totalPrice">$<span id="estimateTotal">0</span></div>
-          </div>
-
-          <div class="pricingCta">
-            <a class="btn btnPrimary" href="contact.html">Request a Quote</a>
-            <a class="btn btnGhost" href="portfolio.html">View Portfolio</a>
-            <a class="btn btnGhost" href="about.html">About Us</a>
-          </div>
-
-          <p class="tiny">
-            Prices are “starting at” to stay accurate. Final quote depends on vehicle size + condition.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- MID CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="cta">
-          <div class="ctaText">
-            <h2>Want it to look expensive again?</h2>
-            <p>Tell us the vehicle + condition. We’ll reply with a clean quote.</p>
-          </div>
-          <div class="ctaActions">
-            <a class="btn btnPrimary" href="contact.html">Request a Quote</a>
-            <a class="btn btnGhost" href="portfolio.html">See Results</a>
-          </div>
-        </div>
-      </div>
-    </section>
-      </main>
-
-  <footer class="footer">
-    <div class="container footerInner">
-      <div class="footerBrand">
-        <div class="brandName">Precision Works</div>
-        <div class="brandSub">Detailing • Goshen, IN</div>
-      </div>
-
-      <div class="footerLinks">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Request a Quote</a>
-      </div>
-
-      <div class="footerSmall">
-        <span>Serving Goshen + surrounding areas.</span>
+    <div class="card serviceCard">
+      <h3>Interior Detail</h3>
+      <p>Touch points, creases, and details that make the cabin feel new again.</p>
+      <div class="serviceMeta">
+        <span class="tag">Vacuum</span>
+        <span class="tag">Steam</span>
+        <span class="tag">Trim reset</span>
       </div>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="card serviceCard">
+      <h3>Deep Clean / Steam</h3>
+      <p>Precision cleaning for seams and high-contact areas.</p>
+      <div class="serviceMeta">
+        <span class="tag">Cracks</span>
+        <span class="tag">Creases</span>
+        <span class="tag">High-touch</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section container">
+  <div class="sectionHead">
+    <div>
+      <h2>Pricing</h2>
+      <p>Final quote depends on size + condition.</p>
+    </div>
+  </div>
+
+  <div class="pricingWrap">
+
+    <div class="pricingControls">
+      <div class="select">
+        Vehicle size:
+        <select id="vehicleSize">
+          <option value="0">Sedan</option>
+          <option value="20">SUV</option>
+          <option value="40">Truck</option>
+        </select>
+      </div>
+
+      <div class="select">
+        Condition:
+        <select id="condition">
+          <option value="0">Typical</option>
+          <option value="30">Moderate</option>
+          <option value="60">Heavy</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="priceGrid">
+
+      <div class="priceCard" data-base="120">
+        <h3>Exterior</h3>
+        <div class="price">$<span class="priceValue">120</span></div>
+      </div>
+
+      <div class="priceCard" data-base="140">
+        <h3>Interior</h3>
+        <div class="price">$<span class="priceValue">140</span></div>
+      </div>
+
+      <div class="priceCard" data-base="240">
+        <h3>Full Detail</h3>
+        <div class="price">$<span class="priceValue">240</span></div>
+      </div>
+
+    </div>
+
+    <div class="addons">
+      <div class="check">
+        <label>
+          <b>Pet hair removal</b>
+          <em>+ $25</em>
+        </label>
+        <input type="checkbox" class="addonCheck" data-add="25">
+      </div>
+
+      <div class="check">
+        <label>
+          <b>Engine bay wipe-down</b>
+          <em>+ $35</em>
+        </label>
+        <input type="checkbox" class="addonCheck" data-add="35">
+      </div>
+
+      <div class="check">
+        <label>
+          <b>Headlight clarity</b>
+          <em>+ $30</em>
+        </label>
+        <input type="checkbox" class="addonCheck" data-add="30">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section container">
+  <div class="card">
+    <h2>Ready to upgrade the finish?</h2>
+    <p>Tell us the vehicle + condition. We’ll reply with a clean quote.</p>
+    <div class="heroActions">
+      <a href="contact.html" class="btn btn--accent">Request a Quote</a>
+      <a href="portfolio.html" class="btn btn--ghost">See Results</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    Precision Works Detailing • Goshen, IN
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
