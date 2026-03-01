@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Precision Works Detailing | Goshen, IN</title>
+
+<title>Obsidian Auto Detailing | Goshen, IN</title>
+<meta name="description" content="Obsidian Auto Detailing — premium automotive detailing in Goshen, Indiana and surrounding areas.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -14,7 +16,10 @@
 <!-- Top Bar -->
 <div class="topbar">
   <div class="container navFlex">
-    <div class="pill">Goshen, IN • Surrounding areas</div>
+    <div class="pill">
+      <span class="dot"></span>
+      Goshen, IN • Surrounding areas
+    </div>
     <a href="contact.html" class="btn btn--ghost">Request a Quote</a>
   </div>
 </div>
@@ -22,50 +27,55 @@
 <!-- Header -->
 <header class="container header">
   <div class="brand">
-    <div class="brand__name">Precision Works</div>
+    <div class="brand__name">Obsidian Auto</div>
     <div class="brand__tag">Detailing</div>
   </div>
 
   <nav class="navlinks">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="btn btn--accent">Request a Quote</a>
+    <a data-nav href="index.html">Home</a>
+    <a data-nav href="portfolio.html">Portfolio</a>
+    <a data-nav href="about.html">About</a>
+    <a data-nav href="contact.html" class="btn btn--accent">Request a Quote</a>
   </nav>
 </header>
 
 <main>
 
-<!-- HERO -->
-<section class="hero container">
-  <div class="heroCard">
-    <div class="heroMedia" style="background-image:url('assets/images/hero-mercedes-top-closed.jpg.JPG');"></div>
+<!-- HERO WITH FULL IMAGE BACKGROUND -->
+<section class="heroFull">
 
-    <div class="heroInner">
-      <div class="kicker">PERFORMANCE-LEVEL FINISH • GOSHEN, IN</div>
+  <div class="heroFull__bg"></div>
 
-      <h1>
-        Luxury-level detailing<br>
-        with an edge.
-      </h1>
+  <div class="heroFull__overlay"></div>
 
-      <p>
-        Crisp reflections. Tight lines. Zero shortcuts. We obsess over the small stuff that makes a car look expensive in real light.
-      </p>
+  <div class="container heroFull__content">
+    
+    <div class="kicker">PERFORMANCE-LEVEL FINISH • GOSHEN, IN</div>
 
-      <div class="heroActions">
-        <a href="contact.html" class="btn btn--accent">Request a Quote</a>
-        <a href="portfolio.html" class="btn btn--ghost">See Results</a>
-      </div>
+    <h1>
+      Obsidian Auto Detailing
+    </h1>
 
-      <div class="heroFacts">
-        <div><b>1–2</b> Day turnaround</div>
-        <div><b>Local</b> Goshen + nearby</div>
-        <div><b>Finished</b> Edges, glass, trim</div>
-      </div>
+    <p>
+      Deep gloss. Clean lines. Zero shortcuts.
+      We build finishes that look expensive in real light.
+    </p>
+
+    <div class="heroActions">
+      <a href="contact.html" class="btn btn--accent">Request a Quote</a>
+      <a href="portfolio.html" class="btn btn--ghost">See Results</a>
     </div>
+
+    <div class="heroFacts">
+      <div><b>1–2</b> Day turnaround</div>
+      <div><b>Local</b> Goshen + nearby</div>
+      <div><b>Precision</b> Edges, glass, trim</div>
+    </div>
+
   </div>
+
 </section>
+
 
 <!-- WHAT CLIENTS NOTICE -->
 <section class="section container">
@@ -86,6 +96,7 @@
   </div>
 </section>
 
+
 <!-- SERVICES -->
 <section class="section container">
   <div class="sectionHead">
@@ -99,7 +110,7 @@
 
     <div class="card serviceCard">
       <h3>Exterior Detail</h3>
-      <p>Wash, decon, and finish work that brings back clarity and depth.</p>
+      <p>Wash, decon, and finish work that restores depth and reflection.</p>
       <div class="serviceMeta">
         <span class="tag">Foam wash</span>
         <span class="tag">Decon</span>
@@ -109,7 +120,7 @@
 
     <div class="card serviceCard">
       <h3>Interior Detail</h3>
-      <p>Touch points, creases, and details that make the cabin feel new again.</p>
+      <p>Creases, seams, touch points — the details that make it feel new.</p>
       <div class="serviceMeta">
         <span class="tag">Vacuum</span>
         <span class="tag">Steam</span>
@@ -118,24 +129,25 @@
     </div>
 
     <div class="card serviceCard">
-      <h3>Deep Clean / Steam</h3>
-      <p>Precision cleaning for seams and high-contact areas.</p>
+      <h3>Full Detail</h3>
+      <p>Interior + exterior package built for a full reset.</p>
       <div class="serviceMeta">
-        <span class="tag">Cracks</span>
-        <span class="tag">Creases</span>
-        <span class="tag">High-touch</span>
+        <span class="tag">Complete</span>
+        <span class="tag">Precision</span>
+        <span class="tag">High finish</span>
       </div>
     </div>
 
   </div>
 </section>
 
+
 <!-- PRICING -->
 <section class="section container">
   <div class="sectionHead">
     <div>
       <h2>Pricing</h2>
-      <p>Final quote depends on size + condition.</p>
+      <p>Final quote depends on vehicle size + condition.</p>
     </div>
   </div>
 
@@ -180,40 +192,15 @@
 
     </div>
 
-    <div class="addons">
-      <div class="check">
-        <label>
-          <b>Pet hair removal</b>
-          <em>+ $25</em>
-        </label>
-        <input type="checkbox" class="addonCheck" data-add="25">
-      </div>
-
-      <div class="check">
-        <label>
-          <b>Engine bay wipe-down</b>
-          <em>+ $35</em>
-        </label>
-        <input type="checkbox" class="addonCheck" data-add="35">
-      </div>
-
-      <div class="check">
-        <label>
-          <b>Headlight clarity</b>
-          <em>+ $30</em>
-        </label>
-        <input type="checkbox" class="addonCheck" data-add="30">
-      </div>
-    </div>
-
   </div>
 </section>
+
 
 <!-- CTA -->
 <section class="section container">
   <div class="card">
     <h2>Ready to upgrade the finish?</h2>
-    <p>Tell us the vehicle + condition. We’ll reply with a clean quote.</p>
+    <p>Send your vehicle + condition. We’ll reply with a clean quote.</p>
     <div class="heroActions">
       <a href="contact.html" class="btn btn--accent">Request a Quote</a>
       <a href="portfolio.html" class="btn btn--ghost">See Results</a>
@@ -224,8 +211,8 @@
 </main>
 
 <footer class="footer">
-  <div class="container">
-    Precision Works Detailing • Goshen, IN
+  <div class="container footRow">
+    <div>© <span id="yr"></span> Obsidian Auto Detailing • Goshen, IN</div>
   </div>
 </footer>
 
