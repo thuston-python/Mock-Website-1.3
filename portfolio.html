@@ -4,91 +4,248 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio | Precision Works Detailing</title>
+  <meta name="description" content="Portfolio of premium detailing work in Goshen, IN and surrounding areas." />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
+  <!-- Topline -->
   <div class="topline">
     <div class="container">
       <div class="row">
-        <div class="pill"><span class="dot"></span> Goshen, IN — Serving surrounding areas</div>
+        <div class="pill"><span class="dot"></span> Goshen, IN • Surrounding areas</div>
         <a class="pill" href="contact.html">Request a Quote</a>
       </div>
     </div>
   </div>
 
+  <!-- Nav -->
   <header class="container">
     <nav class="nav">
       <div class="brand">
         <div class="name">Precision Works Detailing</div>
-        <div class="sub">Performance-level finish. Clean, sharp, local.</div>
+        <div class="sub">Luxury-level detailing with an edge.</div>
       </div>
+
       <div class="navlinks">
         <a data-nav href="index.html">Home</a>
-        <a data-nav href="portfolio.html">Portfolio</a>
+        <a data-nav href="portfolio.html" class="active">Portfolio</a>
         <a data-nav href="about.html">About</a>
         <a data-nav href="contact.html">Request a Quote</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
-    <div class="pageHead">
-      <h1>Portfolio</h1>
-      <p>These are example shots to show the vibe. Want a “full detail cars” page later? We can add that next.</p>
+  <main class="section">
+    <div class="container">
+
+      <div class="sectionTitle">
+        <h1 style="margin:0;">Portfolio</h1>
+        <p style="max-width: 780px;">
+          Real work. Real lighting. Tap any photo for full-screen.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters" role="tablist" aria-label="Portfolio filters">
+        <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-filter="mercedes" role="tab">Mercedes</button>
+        <button class="chip" data-filter="interior" role="tab">Interior</button>
+        <button class="chip" data-filter="foam" role="tab">Foam</button>
+        <button class="chip" data-filter="detail" role="tab">Detail shots</button>
+      </div>
+
+      <!-- Grid -->
+      <section class="masonry" aria-label="Portfolio gallery">
+        <!-- Mercedes -->
+        <figure class="shot" data-tags="mercedes">
+          <img src="assets/images/gallery-mercedes-front-top.jpg" alt="Mercedes top view (front)" loading="lazy">
+        </figure>
+
+        <figure class="shot" data-tags="mercedes">
+          <img src="assets/images/gallery-mercedes-top-doors-open.jpg" alt="Mercedes top view with doors open" loading="lazy">
+        </figure>
+
+        <figure class="shot" data-tags="mercedes">
+          <img src="assets/images/gallery-mercedes-rear-top.jpg" alt="Mercedes top view (rear)" loading="lazy">
+        </figure>
+
+        <figure class="shot" data-tags="mercedes detail">
+          <img src="assets/images/gallery-blue-headlight-closeup.jpg" alt="Blue car headlight close-up" loading="lazy">
+        </figure>
+
+        <!-- Interior -->
+        <figure class="shot" data-tags="interior">
+          <img src="assets/images/service-interior-clean-suv.jpg" alt="Clean SUV interior" loading="lazy">
+        </figure>
+
+        <figure class="shot" data-tags="interior detail">
+          <img src="assets/images/service-interior-steam-door.jpg" alt="Steam cleaning car door panel" loading="lazy">
+        </figure>
+
+        <!-- Foam / wash -->
+        <figure class="shot" data-tags="foam">
+          <img src="assets/images/gallery-red-car-foam-bay.jpg" alt="Red car covered in foam in a wash bay" loading="lazy">
+        </figure>
+
+        <figure class="shot" data-tags="foam detail">
+          <img src="assets/images/service-foam-closeup-q4.jpg" alt="Foam close-up on Q4 badge" loading="lazy">
+        </figure>
+
+        <figure class="shot" data-tags="detail">
+          <img src="assets/images/service-hand-wash-sponge.jpg" alt="Hand wash with sponge on wet paint" loading="lazy">
+        </figure>
+      </section>
+
+      <!-- CTA -->
+      <section class="section" style="padding-top: 18px;">
+        <div class="card" style="padding: 18px;">
+          <div class="row" style="gap: 12px; flex-wrap: wrap; align-items:center;">
+            <div style="flex:1; min-width: 250px;">
+              <div class="kicker">Want your car to look like this?</div>
+              <div style="font-weight:700; font-size: 18px; margin-top: 6px;">
+                Send photos + we’ll quote fast.
+              </div>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+              <a class="btn primary" href="contact.html">Request a Quote</a>
+              <a class="btn" href="about.html">What we do</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
-
-    <section class="section" style="padding-top:18px;">
-      <div class="gallery">
-        <div class="gItem big">
-          <img src="assets/images/gallery-mercedes-front-top.jpg" alt="White Mercedes top view" />
-          <div class="gCaption">Mercedes — front/top</div>
-        </div>
-
-        <div class="gItem">
-          <img src="assets/images/gallery-mercedes-top-doors-open.jpg" alt="White Mercedes top view doors open" />
-          <div class="gCaption">Doors open — top view</div>
-        </div>
-
-        <div class="gItem">
-          <img src="assets/images/gallery-mercedes-rear-top.jpg" alt="White Mercedes rear top view" />
-          <div class="gCaption">Rear/top</div>
-        </div>
-
-        <div class="gItem">
-          <img src="assets/images/service-interior-steam-door.jpg" alt="Steam cleaning interior door panel" />
-          <div class="gCaption">Interior steam</div>
-        </div>
-
-        <div class="gItem">
-          <img src="assets/images/service-foam-closeup-q4.jpg" alt="Foam on Audi Q4 badge" />
-          <div class="gCaption">Foam closeup</div>
-        </div>
-
-        <div class="gItem">
-          <img src="assets/images/gallery-blue-headlight-closeup.jpg" alt="Blue car headlight closeup" />
-          <div class="gCaption">Headlight detail</div>
-        </div>
-      </div>
-
-      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn" href="index.html">Back Home</a>
-        <a class="btn primary" href="contact.html">Request a Quote</a>
-      </div>
-    </section>
   </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lbClose" aria-label="Close">&times;</button>
+
+    <button class="lbNav prev" aria-label="Previous image">‹</button>
+    <img class="lbImg" alt="" />
+    <button class="lbNav next" aria-label="Next image">›</button>
+
+    <div class="lbMeta">
+      <div class="lbCaption"></div>
+      <div class="lbHint">Tap sides / use arrows • Esc to close</div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container footRow">
       <div>© <span id="yr"></span> Precision Works Detailing • Goshen, IN</div>
       <div class="smallLinks">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Request a Quote</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script>
+    // footer year
+    document.getElementById("yr").textContent = new Date().getFullYear();
+
+    // Filtering
+    const chips = Array.from(document.querySelectorAll(".filters .chip"));
+    const shots = Array.from(document.querySelectorAll(".shot"));
+
+    function setFilter(tag) {
+      chips.forEach(c => {
+        const active = c.dataset.filter === tag;
+        c.classList.toggle("is-active", active);
+        c.setAttribute("aria-selected", active ? "true" : "false");
+      });
+
+      shots.forEach(s => {
+        const tags = (s.dataset.tags || "").split(" ").map(t => t.trim()).filter(Boolean);
+        const show = tag === "all" || tags.includes(tag);
+        s.style.display = show ? "" : "none";
+      });
+    }
+
+    chips.forEach(c => c.addEventListener("click", () => setFilter(c.dataset.filter)));
+
+    // Lightbox
+    const lb = document.getElementById("lightbox");
+    const lbImg = lb.querySelector(".lbImg");
+    const lbCaption = lb.querySelector(".lbCaption");
+    const btnClose = lb.querySelector(".lbClose");
+    const btnPrev = lb.querySelector(".prev");
+    const btnNext = lb.querySelector(".next");
+
+    // Only include currently visible shots in the lightbox order:
+    function visibleShots() {
+      return shots.filter(s => s.style.display !== "none");
+    }
+
+    let idx = 0;
+
+    function openAt(i) {
+      const list = visibleShots();
+      if (!list.length) return;
+
+      idx = (i + list.length) % list.length;
+      const img = list[idx].querySelector("img");
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || "";
+      lbCaption.textContent = img.alt || "";
+      lb.setAttribute("aria-hidden", "false");
+      lb.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLb() {
+      lb.setAttribute("aria-hidden", "true");
+      lb.classList.remove("open");
+      document.body.style.overflow = "";
+      // small cleanup (helps iOS sometimes)
+      setTimeout(() => { lbImg.src = ""; }, 60);
+    }
+
+    function next() { openAt(idx + 1); }
+    function prev() { openAt(idx - 1); }
+
+    shots.forEach((s) => {
+      s.addEventListener("click", () => {
+        const list = visibleShots();
+        const i = list.indexOf(s);
+        openAt(i >= 0 ? i : 0);
+      });
+    });
+
+    btnClose.addEventListener("click", closeLb);
+    btnNext.addEventListener("click", next);
+    btnPrev.addEventListener("click", prev);
+
+    lb.addEventListener("click", (e) => {
+      // click outside image closes
+      if (e.target === lb) closeLb();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") closeLb();
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    });
+
+    // Simple swipe support for mobile
+    let startX = 0;
+    lb.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    lb.addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const dx = endX - startX;
+      if (Math.abs(dx) < 40) return;
+      if (dx < 0) next();
+      else prev();
+    }, { passive: true });
+  </script>
+
 </body>
 </html>
