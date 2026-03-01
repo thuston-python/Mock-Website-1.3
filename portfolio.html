@@ -1,1 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio | Precision Works Detailing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
+  <div class="topline">
+    <div class="container">
+      <div class="row">
+        <div class="pill"><span class="dot"></span> Goshen, IN — Serving surrounding areas</div>
+        <a class="pill" href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="name">Precision Works Detailing</div>
+        <div class="sub">Performance-level finish. Clean, sharp, local.</div>
+      </div>
+      <div class="navlinks">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="portfolio.html">Portfolio</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="contact.html">Request a Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="pageHead">
+      <h1>Portfolio</h1>
+      <p>These are example shots to show the vibe. Want a “full detail cars” page later? We can add that next.</p>
+    </div>
+
+    <section class="section" style="padding-top:18px;">
+      <div class="gallery">
+        <div class="gItem big">
+          <img src="assets/images/gallery-mercedes-front-top.jpg" alt="White Mercedes top view" />
+          <div class="gCaption">Mercedes — front/top</div>
+        </div>
+
+        <div class="gItem">
+          <img src="assets/images/gallery-mercedes-top-doors-open.jpg" alt="White Mercedes top view doors open" />
+          <div class="gCaption">Doors open — top view</div>
+        </div>
+
+        <div class="gItem">
+          <img src="assets/images/gallery-mercedes-rear-top.jpg" alt="White Mercedes rear top view" />
+          <div class="gCaption">Rear/top</div>
+        </div>
+
+        <div class="gItem">
+          <img src="assets/images/service-interior-steam-door.jpg" alt="Steam cleaning interior door panel" />
+          <div class="gCaption">Interior steam</div>
+        </div>
+
+        <div class="gItem">
+          <img src="assets/images/service-foam-closeup-q4.jpg" alt="Foam on Audi Q4 badge" />
+          <div class="gCaption">Foam closeup</div>
+        </div>
+
+        <div class="gItem">
+          <img src="assets/images/gallery-blue-headlight-closeup.jpg" alt="Blue car headlight closeup" />
+          <div class="gCaption">Headlight detail</div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn" href="index.html">Back Home</a>
+        <a class="btn primary" href="contact.html">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footRow">
+      <div>© <span id="yr"></span> Precision Works Detailing • Goshen, IN</div>
+      <div class="smallLinks">
+        <a href="about.html">About</a>
+        <a href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
