@@ -4,59 +4,274 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Request a Quote | Precision Works Detailing</title>
+  <meta name="description" content="Request a quote for detailing in Goshen, IN and surrounding areas." />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Page-specific form styling (keeps this clean without touching styles.css again) -->
+  <style>
+    .formGrid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 14px;
+      align-items: start;
+    }
+    @media (max-width: 980px){
+      .formGrid{ grid-template-columns: 1fr; }
+    }
+
+    .formWrap{ padding: 18px; }
+    .field{ display:grid; gap:6px; margin-bottom: 12px; }
+    label{
+      font-size: 12px;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.68);
+      font-weight: 700;
+    }
+    input, select, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.92);
+      font-size: 14px;
+      outline: none;
+      transition: border-color .18s ease, background .18s ease;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(210,180,120,.55);
+      background: rgba(255,255,255,.05);
+    }
+    textarea{ min-height: 140px; resize: vertical; }
+
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 560px){
+      .twoCol{ grid-template-columns: 1fr; }
+    }
+
+    .note{
+      margin-top: 10px;
+      color: rgba(255,255,255,.62);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .sideCard{
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+    }
+    .sideCard img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      filter: contrast(1.05) saturate(1.05);
+    }
+    .sideCard .overlay{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 500px at 20% 40%, rgba(0,0,0,0.10), rgba(0,0,0,0.78)),
+        linear-gradient(90deg, rgba(0,0,0,0.62), rgba(0,0,0,0.20) 60%, rgba(0,0,0,0.70));
+    }
+    .sideCard .info{
+      position:absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.30);
+      backdrop-filter: blur(10px);
+    }
+    .infoLine{
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+    }
+    .infoLine b{ color: rgba(255,255,255,.92); }
+    .tiny{
+      margin-top: 10px;
+      color: rgba(255,255,255,.62);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* simple checkbox row */
+    .checkRow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin: 10px 0 2px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+    }
+    .checkRow input{ width: 18px; height: 18px; }
+  </style>
 </head>
+
 <body>
 
+  <!-- Topline -->
   <div class="topline">
     <div class="container">
       <div class="row">
-        <div class="pill"><span class="dot"></span> Goshen, IN — Serving surrounding areas</div>
-        <div class="pill">Fast reply • No booking links</div>
+        <div class="pill"><span class="dot"></span> Goshen, IN • Surrounding areas</div>
+        <a class="pill" href="portfolio.html">View Portfolio</a>
       </div>
     </div>
   </div>
 
+  <!-- Nav -->
   <header class="container">
     <nav class="nav">
       <div class="brand">
         <div class="name">Precision Works Detailing</div>
-        <div class="sub">Performance-level finish. Clean, sharp, local.</div>
+        <div class="sub">Luxury-level detailing with an edge.</div>
       </div>
+
       <div class="navlinks">
         <a data-nav href="index.html">Home</a>
         <a data-nav href="portfolio.html">Portfolio</a>
         <a data-nav href="about.html">About</a>
-        <a data-nav href="contact.html">Request a Quote</a>
+        <a data-nav href="contact.html" class="active">Request a Quote</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
-    <div class="pageHead">
-      <h1>Request a quote</h1>
-      <p>
-        Tell us what you want done and what vehicle you have. We’ll respond with a clean recommendation and pricing.
-        (This form is a placeholder — we can wire it to email/Forms next.)
-      </p>
-    </div>
+  <main class="section" style="padding-top: 18px;">
+    <div class="container">
 
-    <section class="section" style="padding-top:18px;">
-      <div class="card" style="padding:18px;">
-        <p style="margin:0; color:var(--muted); line-height:1.7;">
-          ✅ Next step after this: we add a real form handler + anti-spam (Cloudflare Turnstile) so bots can’t spam you.
-        </p>
-
-        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="mailto:your@email.com?subject=Quote%20Request%20-%20Precision%20Works%20Detailing">Email to Request a Quote</a>
-          <a class="btn" href="portfolio.html">See Results</a>
-        </div>
-
-        <p style="margin-top:14px; color:var(--faint); font-size:12px;">
-          Replace <b>your@email.com</b> with your real business email when you’re ready.
+      <div class="sectionTitle">
+        <h1 style="margin:0;">Request a Quote</h1>
+        <p style="max-width: 780px;">
+          Send the basics. We’ll reply with pricing + the best route for your vehicle.
         </p>
       </div>
-    </section>
+
+      <div class="formGrid">
+        <!-- FORM -->
+        <section class="card formWrap" aria-label="Quote form">
+          <form
+            action="https://formspree.io/f/xojnpprq"
+            method="POST"
+          >
+            <!-- Formspree settings -->
+            <input type="hidden" name="_subject" value="New Quote Request - Precision Works Detailing" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <!-- Optional: if you want a redirect page later, we can set: <input type="hidden" name="_redirect" value="https://your-site/success.html"> -->
+
+            <div class="twoCol">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="574-606-3604" required />
+              </div>
+            </div>
+
+            <div class="twoCol">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" required />
+              </div>
+
+              <div class="field">
+                <label for="service">Service</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Exterior Detail</option>
+                  <option>Interior Detail</option>
+                  <option>Full Detail</option>
+                  <option>Deep Clean / Steam</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="twoCol">
+              <div class="field">
+                <label for="vehicle">Vehicle</label>
+                <input id="vehicle" name="vehicle" type="text" placeholder="Year / Make / Model" required />
+              </div>
+
+              <div class="field">
+                <label for="condition">Condition</label>
+                <select id="condition" name="condition" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Light</option>
+                  <option>Average</option>
+                  <option>Heavy</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Notes</label>
+              <textarea id="message" name="message" placeholder="Pet hair, stains, smoke, or anything you want us to know." required></textarea>
+            </div>
+
+            <!-- Human check (simple) -->
+            <div class="checkRow">
+              <input id="human" name="human_check" type="checkbox" required />
+              <label for="human" style="margin:0; letter-spacing:0; text-transform:none; font-size:13px; color:rgba(255,255,255,.82);">
+                I’m a real person (prevents bot spam)
+              </label>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;">
+              <button class="btn primary" type="submit">Send Request</button>
+              <a class="btn" href="tel:15746063604">Call</a>
+              <a class="btn" href="mailto:precisionworksdetails@gmail.com">Email</a>
+            </div>
+
+            <div class="note">
+              Tip: If you have photos, reply to our email with 2–4 pictures for the fastest quote.
+            </div>
+          </form>
+        </section>
+
+        <!-- SIDE IMAGE / CONTACT INFO -->
+        <aside class="card sideCard" aria-label="Contact info">
+          <img src="assets/images/service-interior-steam-door.jpg" alt="Detailing image background" />
+          <div class="overlay"></div>
+
+          <div class="info">
+            <div class="kicker" style="color: rgba(255,255,255,.75);">Direct contact</div>
+            <div class="infoLine" style="margin-top:10px;">
+              <span>Phone</span>
+              <b>(574) 606-3604</b>
+            </div>
+            <div class="infoLine" style="margin-top:6px;">
+              <span>Email</span>
+              <b>precisionworksdetails@gmail.com</b>
+            </div>
+            <div class="infoLine" style="margin-top:6px;">
+              <span>Service area</span>
+              <b>Goshen + nearby</b>
+            </div>
+
+            <div class="tiny">
+              No calendars. No spam. Just a clean quote and a clean finish.
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </div>
   </main>
 
   <footer class="footer">
@@ -65,11 +280,14 @@
       <div class="smallLinks">
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
